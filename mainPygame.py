@@ -63,7 +63,8 @@ def comprovar_victoria(tauler):
 def calcular_posicio_maquina(tauler, simbol):
     import random
 
-    # Revisamos si la máquina puede ganar en el siguiente turno
+
+ 
     for filas in range(3):
         for columna in range(3):
             # Si la fila/columna esta vacia:
@@ -74,7 +75,7 @@ def calcular_posicio_maquina(tauler, simbol):
                     return filas, columna
                 tauler[filas][columna] = "-"
 
-    # Revisamos si el jugador puede ganar en el siguiente turno y bloqueamos
+ 
     simbol_oponente = 'O' if simbol == 'X' else 'X'
     for filas in range(3):
         for columnas in range(3):
@@ -83,8 +84,7 @@ def calcular_posicio_maquina(tauler, simbol):
                 if hay_ganador(tauler, simbol_oponente):
                     return filas, columnas
                 tauler[filas][columnas] = "-"
-
-    # Si no se dan las condiciones anteriores, escogemos una posición al azar
+            
     posicio_valida = False
     while not posicio_valida:
         fila = random.randint(0, 2)

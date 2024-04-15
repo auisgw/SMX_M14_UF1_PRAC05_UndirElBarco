@@ -87,3 +87,4 @@ def comprovar_vaixells_enfonsats(tauler, vaixells):
         if tots_enfonsats:
             vaixells_enfonsats += 1
     return vaixells_enfonsats
+huidgifsdcdfauidvfa
